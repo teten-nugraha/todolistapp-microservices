@@ -1,0 +1,31 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: master-service
+  jpa:
+    database: mysql
+    hibernate:
+      ddl-auto: none
+      show-sql: true
+    properties:
+      hibernate.format_sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/todoapp-master-db
+    username: root
+    password: root
+    initialization-mode: embedded # untuk inisialisasi data, jika tabel ada maka di buatkan, tp jika sudah ada maka di skip
+    platform: mysql # sesuaikan dengan jenis db, nanti nya akan otomatis membaca schema-mysql.sql dan data-mysql.sql
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  server:
+    port: 8761
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
