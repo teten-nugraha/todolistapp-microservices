@@ -29,3 +29,18 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
 
+springdoc:
+  api-docs:
+    path: /api-docs
+#  swagger-ui:
+#    path: /swagger-ui-custom.html
+
+#for openapi doc
+application-description: master service todolist app
+application-version: 1.0.0
+#application-description: @project.description@
+#application-version: @project.version@
+logging.level.org.springframework.boot.autoconfigure: ERROR
+
+#to access spring doc
+#http://localhost:9000/swagger-ui/index:html?url=/api-docs:
