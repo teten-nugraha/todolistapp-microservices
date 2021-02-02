@@ -1,0 +1,27 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: core-service
+  jpa:
+    database: mysql
+    hibernate:
+      ddl-auto: none
+      show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3300/todoapp-core-db
+    username: root
+    password: root
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  server:
+    port: 8761
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
