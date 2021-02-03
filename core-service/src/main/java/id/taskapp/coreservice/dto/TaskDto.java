@@ -1,5 +1,6 @@
 package id.taskapp.coreservice.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -19,6 +20,8 @@ public class TaskDto {
     private String kategori;
     private String nama;
     private boolean finished;
+
+    @JsonFormat(pattern="yyyy-MM-dd")
     private String createdDate;
 
 }

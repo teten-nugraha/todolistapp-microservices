@@ -7,6 +7,8 @@ spring:
 
 #Eureka Setting
 eureka:
+  instance:
+    hostname: localhost #untuk dicoba di localhost
   client:
     register-with-eureka: false
     fetch-registry: false

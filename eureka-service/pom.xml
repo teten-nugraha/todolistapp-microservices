@@ -39,6 +39,12 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+
+<!--		spring admin dependency-->
+		<dependency>
+			<groupId>org.jolokia</groupId>
+			<artifactId>jolokia-core</artifactId>
+		</dependency>
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>

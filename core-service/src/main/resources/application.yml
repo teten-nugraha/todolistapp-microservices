@@ -19,6 +19,8 @@ spring:
     platform: mysql # sesuaikan dengan jenis db, nanti nya akan otomatis membaca schema-mysql.sql dan data-mysql.sql
 
 eureka:
+  instance:
+    hostname: localhost #untuk dicoba di localhost
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka

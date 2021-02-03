@@ -2,6 +2,7 @@ package id.taskapp.coreservice.service.impl;
 
 import id.taskapp.coreservice.domain.Task;
 import id.taskapp.coreservice.dto.TaskDto;
+import id.taskapp.coreservice.proxy.FeignAnalyticService;
 import id.taskapp.coreservice.repo.TaskRepository;
 import id.taskapp.coreservice.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +18,9 @@ public class TaskServiceImpl implements TaskService {
     @Autowired
     private TaskRepository taskRepository;
 
-//    @Qualifier("analytic-service")
-//    @Autowired
-//    private FeignAnalyticService feignAnalyticService;
+    @Qualifier("analytic-service")
+    @Autowired
+    private FeignAnalyticService feignAnalyticService;
 
     @Override
     public List<Task> findAll() {
@@ -47,7 +48,7 @@ public class TaskServiceImpl implements TaskService {
         Task newTask  = taskRepository.save(task);
         TaskDto dto =  createDto(newTask);
         if(task.isFinished()) {
-//            String result = feignAnalyticService.createFinishedTask(dto);
+            String result = feignAnalyticService.createFinishedTask(dto);
         }
         return taskRepository.save(task);
     }
