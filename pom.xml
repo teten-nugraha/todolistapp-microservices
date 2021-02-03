@@ -21,6 +21,8 @@
     <modules>
         <module>eureka-service</module>
         <module>core-service</module>
+        <module>master-service</module>
+        <module>analytic-service</module>
     </modules>
 
 
