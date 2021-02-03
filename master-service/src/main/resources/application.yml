@@ -20,7 +20,7 @@ spring:
 
 eureka:
   instance:
-    prefer-ip-address: true
+    prefer-ip-address: false
   server:
     port: 8761
   client:
@@ -33,9 +33,6 @@ eureka:
 #for openapi doc
 application-description: master service todolist app
 application-version: 1.0.0
-#application-description: @project.description@
-#application-version: @project.version@
-logging.level.org.springframework.boot.autoconfigure: ERROR
 
 #to access spring doc
 springdoc:
@@ -45,4 +42,3 @@ springdoc:
   api-docs:
     path: /master-api
 
-#http://localhost:9000/swagger-ui/index:html?url=/api-docs:
