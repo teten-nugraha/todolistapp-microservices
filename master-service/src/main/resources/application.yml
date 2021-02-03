@@ -29,11 +29,6 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
 
-springdoc:
-  api-docs:
-    path: /api-docs
-#  swagger-ui:
-#    path: /swagger-ui-custom.html
 
 #for openapi doc
 application-description: master service todolist app
@@ -43,4 +38,11 @@ application-version: 1.0.0
 logging.level.org.springframework.boot.autoconfigure: ERROR
 
 #to access spring doc
+springdoc:
+  swagger-ui:
+    disable-swagger-default-url: true #untuk menghilangkan default url swagger yaitu Petstore
+  packages-to-scan: id.todolistapp.masterservice.web  #scan controller layer
+  api-docs:
+    path: /master-api
+
 #http://localhost:9000/swagger-ui/index:html?url=/api-docs:
