@@ -1,0 +1,39 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: analytic-service
+  jpa:
+    database: mysql
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+    properties:
+      hibernate.format_sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/todoapp-analytic-db
+    username: root
+    password: root
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    register-with-eureka: true #untuk mendaftarkan sendiri ke eureka
+    fetch-registry: true #untuk bisa memfetch
+    registry-fetch-interval-seconds: 5 #5 detik untuk memfetch ke eureka
+
+
+#for openapi doc
+application-description: analytic service todolist app
+application-version: 1.0.0
+
+#to access spring doc
+springdoc:
+  swagger-ui:
+    disable-swagger-default-url: true #untuk menghilangkan default url swagger yaitu Petstore
+  packages-to-scan: id.taskapp.analyticservice.web  #scan controller layer
+  api-docs:
+    path: /analytic-api
+

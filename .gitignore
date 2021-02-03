@@ -4,6 +4,24 @@ eureka-service/.mvn/wrapper/maven-wrapper.jar
 eureka-service/src/main/**/target/
 eureka-service/src/test/**/target/
 
+core-service/HELP.md
+core-service/target/
+core-service/.mvn/wrapper/maven-wrapper.jar
+core-service/src/main/**/target/
+core-service/src/test/**/target/
+
+master-service/HELP.md
+master-service/target/
+master-service/.mvn/wrapper/maven-wrapper.jar
+master-service/src/main/**/target/
+master-service/src/test/**/target/
+
+analytic-service/HELP.md
+analytic-service/target/
+analytic-service/.mvn/wrapper/maven-wrapper.jar
+analytic-service/src/main/**/target/
+analytic-service/src/test/**/target/
+
 ### IntelliJ IDEA ###
 .idea
 *.iws
@@ -14,4 +32,19 @@ eureka-service/.idea
 eureka-service/*.iws
 eureka-service/*.iml
 eureka-service/*.ipr
+
+core-service/.idea
+core-service/*.iws
+core-service/*.iml
+core-service/*.ipr
+
+master-service/.idea
+master-service/*.iws
+master-service/*.iml
+master-service/*.ipr
+
+analytic-service/.idea
+analytic-service/*.iws
+analytic-service/*.iml
+analytic-service/*.ipr
 

@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>id.taskapp</groupId>
-	<artifactId>core-service</artifactId>
+	<artifactId>analytic-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>core-service</name>
-	<description>Core Service</description>
+	<name>analytic-service</name>
+	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>Hoxton.SR9</spring-cloud.version>
@@ -41,10 +41,6 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
@@ -66,6 +62,7 @@
 			</exclusions>
 		</dependency>
 
+		<!-- for rest api documentation-->
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-ui</artifactId>
@@ -92,12 +89,12 @@
 				<configuration>
 					<excludes>
 						<exclude>
-							<groupId>org.springframework.boot</groupId>
-							<artifactId>spring-boot-configuration-processor</artifactId>
-						</exclude>
-						<exclude>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
+						</exclude>
+						<exclude>
+							<groupId>org.springframework.boot</groupId>
+							<artifactId>spring-boot-configuration-processor</artifactId>
 						</exclude>
 					</excludes>
 				</configuration>
