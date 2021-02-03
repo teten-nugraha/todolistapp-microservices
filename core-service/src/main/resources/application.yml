@@ -26,6 +26,27 @@ eureka:
     fetch-registry: true #untuk bisa memfetch
     registry-fetch-interval-seconds: 5 #5 detik untuk memfetch ke eureka
 
+analytic-service-route:
+  ribbon:
+    DeploymentContextBasedVipAddresses: analytic-service
+    ReadTimeout: 60000
+    MaxAutoRetries: 2
+
+application:
+  config:
+    feign:
+      route:
+        analytic-service: analytic-service-route
+
+#Feign Client Configuration
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
+
 
 #for openapi doc
 application-description: core service todolist app
