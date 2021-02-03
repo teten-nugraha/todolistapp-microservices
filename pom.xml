@@ -23,6 +23,7 @@
         <module>core-service</module>
         <module>master-service</module>
         <module>analytic-service</module>
+        <module>monitor-service</module>
     </modules>
 
 
